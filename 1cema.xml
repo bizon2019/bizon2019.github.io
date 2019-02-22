@@ -52,6 +52,34 @@
 			<bsch:cmdOperand>0,0</bsch:cmdOperand>
 		</valueManagerModule>
 	</constant>
+	<constant name="ПортСервера" id="0b8b6221-c0c7-4463-a785-d3a5ea363e63">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Порт сервера</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.ПортСервера" category="Manager">
+			<xr:TypeId>571a8b69-d70e-438e-9664-df45ed2014a7</xr:TypeId>
+			<xr:ValueId>542a981a-5137-42c4-8455-9d09ff7225b0</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.ПортСервера" category="ValueManager">
+			<xr:TypeId>cbe9d84a-55db-4e21-97c8-e8dcdc3402f3</xr:TypeId>
+			<xr:ValueId>17be9e8d-4cb9-45ec-b5eb-546dc08e06f5</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>5</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+	</constant>
 	<catalog name="Номенклатура" id="687ec532-5825-4fb1-a9dd-8c0a7b63f334">
 		<synonym>
 			<v8:item>
@@ -898,7 +926,7 @@
 				</mf:serverModule>
 				<mf:clientModule version="1" startAddr="6">
 					<bsch:cmdOpCode>1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>37,0,1,37,38,0,0,0</bsch:cmdOperand>
+					<bsch:cmdOperand>38,0,1,38,39,0,0,0</bsch:cmdOperand>
 					<bsch:procedure name="Загрузить" parametersCount="1" startAddr="0">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
@@ -906,11 +934,11 @@
 					<bsch:procedure name="ЗагрузитьНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
 				</mf:clientModule>
 				<mf:serverWOContextModule version="1">
-					<bsch:cmdOpCode>1,3,2,12,18,21,5,1,16,1,3,3,4,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>5,0,0,0,0,1,0,5,0,6,1,0,2,2,3,0,7,2,4,1,5,0,8,3,1,2,1,6,0,8,0,10,3,7,8,0,150,11,4,0,9,0,12,4,3,0,11,0,12,1,10,12,13,5,4,1,1,0,13,0,14,4,0,12,14,15,0,0,5,0,0,15,7,0,0,7,0,142,6,7,0,7,0,0,17,8,1,13,15,6,16,2,14,0,17,0,19,8,1,2,0,19,0,114,20,8,1,13,0,17,0,20,0,122,22,8,8,0,18,0,22,0,23,25,8,15,6,16,0,26,8,19,6,20,0,27,8,0,21,27,28,71,1,7,0,0,7,0,0,158,30,22,3,7,0,1,3,30,31,33,0,0</bsch:cmdOperand>
+					<bsch:cmdOpCode>1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>5,0,0,0,0,1,0,5,0,6,1,0,2,0,1,0,6,0,7,2,0,1,2,3,0,8,3,4,1,5,0,9,4,2,3,1,6,0,9,0,11,4,7,8,0,159,12,5,0,9,0,13,5,4,0,11,0,13,1,10,13,14,6,5,1,1,0,14,0,15,5,0,12,15,16,0,0,6,0,0,16,8,0,0,8,0,151,7,8,0,8,0,0,18,9,1,13,15,7,16,2,14,0,18,0,20,9,1,2,0,20,0,123,21,9,1,13,0,17,0,21,0,131,23,9,9,0,18,0,23,0,24,26,9,15,7,16,0,27,9,19,7,20,0,28,9,0,21,28,29,80,1,8,0,0,8,0,0,167,31,22,4,7,0,1,3,31,32,34,0,0</bsch:cmdOperand>
 					<bsch:constant>SАдресСервера</bsch:constant>
 					<bsch:constant>SПолучить</bsch:constant>
-					<bsch:constant>N80</bsch:constant>
+					<bsch:constant>SПортСервера</bsch:constant>
 					<bsch:constant>SHTTPСоединение</bsch:constant>
 					<bsch:constant>S/server/hs/link/partner</bsch:constant>
 					<bsch:constant>SHTTPЗапрос</bsch:constant>
@@ -935,6 +963,7 @@
 					<bsch:variable name="Справочники" isExternal="true"/>
 					<bsch:procedure name="ЗагрузитьНаСервере" parametersCount="0" startAddr="0">
 						<bsch:variable name="АдресСервера" isLocal="true"/>
+						<bsch:variable name="ПортСервера" isLocal="true"/>
 						<bsch:variable name="Соединение" isLocal="true"/>
 						<bsch:variable name="Запрос" isLocal="true"/>
 						<bsch:variable name="Результат" isLocal="true"/>
