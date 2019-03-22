@@ -25,6 +25,51 @@
 	<startPageWorkingArea>
 		<workingAreaTemplate>OneColumn</workingAreaTemplate>
 	</startPageWorkingArea>
+	<commonForm name="Настройки" id="c5cfa103-5fb0-4cc1-b53d-2d6283f9a3bb">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Настройки</v8:content>
+			</v8:item>
+		</synonym>
+		<form>
+			<mf:serverModule version="1" startAddr="0">
+				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0,0</bsch:cmdOperand>
+			</mf:serverModule>
+			<mf:clientModule version="1" startAddr="0">
+				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0,0</bsch:cmdOperand>
+			</mf:clientModule>
+			<mf:serverWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:serverWOContextModule>
+			<mf:clientServerWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:clientServerWOContextModule>
+			<mf:attributes>
+				<mf:attribute name="НаборКонстант">
+					<mf:type>
+						<v8:TypeId>dcfc3784-a14f-4786-ac7b-c82db5ba275f</v8:TypeId>
+					</mf:type>
+					<mf:main>true</mf:main>
+					<mf:storedData>true</mf:storedData>
+				</mf:attribute>
+			</mf:attributes>
+			<mf:mainElement>
+				<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+				<mf:windowOpeningMode>LockOwnerWindow</mf:windowOpeningMode>
+				<mf:field name="АдресСервера" kind="InputField" dataPath="НаборКонстант.АдресСервера">
+					<mf:contextMenu name="АдресСервераКонтекстноеМеню" type="ContextMenu"/>
+				</mf:field>
+				<mf:field name="ПортСервера" kind="InputField" dataPath="НаборКонстант.ПортСервера">
+					<mf:contextMenu name="ПортСервераКонтекстноеМеню" type="ContextMenu"/>
+				</mf:field>
+			</mf:mainElement>
+		</form>
+	</commonForm>
 	<constant name="АдресСервера" id="610cb962-e25c-4a30-99a0-dca11f85b192">
 		<synonym>
 			<v8:item>
@@ -118,21 +163,21 @@
 		<foldersOnTop>true</foldersOnTop>
 		<inputByString>Description</inputByString>
 		<inputByString>Code</inputByString>
-		<attribute name="Артикуль" id="fa8aa625-b63f-4bdd-933b-25d79ecf6429">
+		<attribute name="Артикул" id="fa8aa625-b63f-4bdd-933b-25d79ecf6429">
 			<synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Артикуль</v8:content>
+					<v8:content>Артикул</v8:content>
 				</v8:item>
 			</synonym>
 			<type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>10</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</type>
-			<fillingValue xsi:type="xs:string"/>
 		</attribute>
 	</catalog>
 	<catalog name="Контрагенты" id="8525864f-566b-4dc7-bd52-a73605c134df">
@@ -328,13 +373,13 @@
 			<format>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ЧРГ=0</v8:content>
+					<v8:content>ЧГ=</v8:content>
 				</v8:item>
 			</format>
 			<editFormat>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ЧРГ=0</v8:content>
+					<v8:content>ЧГ=</v8:content>
 				</v8:item>
 			</editFormat>
 			<fillChecking>ShowError</fillChecking>
@@ -457,30 +502,30 @@
 			</form>
 		</form>
 	</catalog>
-	<catalog name="МестаОтгрузки" id="0892d27a-db63-4c13-af0c-e0c53e83a538">
+	<catalog name="АдресаДоставки" id="0892d27a-db63-4c13-af0c-e0c53e83a538">
 		<synonym>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Места отгрузки</v8:content>
+				<v8:content>Адреса доставки</v8:content>
 			</v8:item>
 		</synonym>
-		<generatedType name="CatalogObject.МестаОтгрузки" category="Object">
+		<generatedType name="CatalogObject.АдресаДоставки" category="Object">
 			<xr:TypeId>ef88f26c-79f1-4906-ab37-0c1d4e7d2338</xr:TypeId>
 			<xr:ValueId>2a0b9008-b507-421f-a2da-c6219a7df80b</xr:ValueId>
 		</generatedType>
-		<generatedType name="CatalogRef.МестаОтгрузки" category="Ref">
+		<generatedType name="CatalogRef.АдресаДоставки" category="Ref">
 			<xr:TypeId>a3ea9f8c-48af-40bf-99da-20762ebf2689</xr:TypeId>
 			<xr:ValueId>8a5e728e-e031-491e-939b-9458acbf61f5</xr:ValueId>
 		</generatedType>
-		<generatedType name="CatalogSelection.МестаОтгрузки" category="Selection">
+		<generatedType name="CatalogSelection.АдресаДоставки" category="Selection">
 			<xr:TypeId>97807790-109b-4812-bc92-77b37498a9f4</xr:TypeId>
 			<xr:ValueId>2fc06faa-9171-4bff-9ae8-43aa650a21d8</xr:ValueId>
 		</generatedType>
-		<generatedType name="CatalogList.МестаОтгрузки" category="List">
+		<generatedType name="CatalogList.АдресаДоставки" category="List">
 			<xr:TypeId>e149d154-c56c-4056-b147-22254149c1a3</xr:TypeId>
 			<xr:ValueId>6927f3ce-ccd7-4d33-89ee-81946a6dee9d</xr:ValueId>
 		</generatedType>
-		<generatedType name="CatalogManager.МестаОтгрузки" category="Manager">
+		<generatedType name="CatalogManager.АдресаДоставки" category="Manager">
 			<xr:TypeId>479727e1-7a30-4b5d-9d69-f1404fd6cc3a</xr:TypeId>
 			<xr:ValueId>bdb4b502-ad4e-480f-a080-f5a7e0e4e92b</xr:ValueId>
 		</generatedType>
@@ -496,8 +541,8 @@
 		<owner>Catalog.Контрагенты</owner>
 		<inputByString>Description</inputByString>
 		<inputByString>Code</inputByString>
-		<defaultObjectForm>Catalog.МестаОтгрузки.Form.ФормаЭлемента</defaultObjectForm>
-		<defaultListForm>Catalog.МестаОтгрузки.Form.ФормаСписка</defaultListForm>
+		<defaultObjectForm>Catalog.АдресаДоставки.Form.ФормаЭлемента</defaultObjectForm>
+		<defaultListForm>Catalog.АдресаДоставки.Form.ФормаСписка</defaultListForm>
 		<attribute name="КПП" id="ddc7cac1-4b54-487a-914b-2ef305e1a317">
 			<synonym>
 				<v8:item>
@@ -542,7 +587,7 @@
 				<mf:attributes>
 					<mf:attribute name="Объект">
 						<mf:type>
-							<v8:Type>cfg:CatalogObject.МестаОтгрузки</v8:Type>
+							<v8:Type>cfg:CatalogObject.АдресаДоставки</v8:Type>
 						</mf:type>
 						<mf:main>true</mf:main>
 						<mf:storedData>true</mf:storedData>
@@ -596,7 +641,7 @@
 							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
 						</mf:type>
 						<mf:extInformation>
-							<mf:mainTable>Catalog.МестаОтгрузки</mf:mainTable>
+							<mf:mainTable>Catalog.АдресаДоставки</mf:mainTable>
 							<mf:mainTableCategory>1</mf:mainTableCategory>
 						</mf:extInformation>
 						<mf:main>true</mf:main>
@@ -693,7 +738,7 @@
 				</v8:item>
 			</synonym>
 			<type>
-				<v8:Type>cfg:CatalogRef.МестаОтгрузки</v8:Type>
+				<v8:Type>cfg:CatalogRef.АдресаДоставки</v8:Type>
 			</type>
 			<choiceParamLinks>
 				<app:item>
@@ -888,18 +933,18 @@
 			</form>
 		</form>
 	</document>
-	<dataProcessor name="ЗагрузкаКонтрагентов" id="259ccb5e-5d6d-47fe-8093-56212359b38f">
+	<dataProcessor name="Загрузка" id="259ccb5e-5d6d-47fe-8093-56212359b38f">
 		<synonym>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Загрузка контрагентов</v8:content>
+				<v8:content>Загрузка</v8:content>
 			</v8:item>
 		</synonym>
-		<generatedType name="DataProcessorObject.ЗагрузкаКонтрагентов" category="Object">
+		<generatedType name="DataProcessorObject.Загрузка" category="Object">
 			<xr:TypeId>cbaac9b1-d9f1-41e4-9d13-3b7ec2901a43</xr:TypeId>
 			<xr:ValueId>2a9bded4-4b6f-4c2d-9975-b7216fbc881c</xr:ValueId>
 		</generatedType>
-		<generatedType name="DataProcessorManager.ЗагрузкаКонтрагентов" category="Manager">
+		<generatedType name="DataProcessorManager.Загрузка" category="Manager">
 			<xr:TypeId>840707fc-8724-4614-b319-eab0703ff388</xr:TypeId>
 			<xr:ValueId>760e843f-8b1b-47b8-b36a-c2c4c6634c15</xr:ValueId>
 		</generatedType>
@@ -911,7 +956,7 @@
 			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 			<bsch:cmdOperand>0,0</bsch:cmdOperand>
 		</objectModule>
-		<defaultForm>DataProcessor.ЗагрузкаКонтрагентов.Form.Форма</defaultForm>
+		<defaultForm>DataProcessor.Загрузка.Form.Форма</defaultForm>
 		<form name="Форма" id="8b2d0722-9724-4166-b4a9-fd51d3d72d53">
 			<synonym>
 				<v8:item>
@@ -924,18 +969,28 @@
 					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 					<bsch:cmdOperand>0,0</bsch:cmdOperand>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="6">
-					<bsch:cmdOpCode>1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>38,0,1,38,39,0,0,0</bsch:cmdOperand>
-					<bsch:procedure name="Загрузить" parametersCount="1" startAddr="0">
+				<mf:clientModule version="1" startAddr="18">
+					<bsch:cmdOpCode>1,18,19,1,1,22,1,18,19,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>110,0,1,110,111,0,115,0,3,115,116,0,120,0,5,120,121,0,0,0</bsch:cmdOperand>
+					<bsch:procedure name="ЗагрузитьАдреса" parametersCount="1" startAddr="0">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ЗагрузитьНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="ЗагрузитьАдресаНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="ЗагрузитьКонтарагентов" parametersCount="1" startAddr="6">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗагрузитьКонтарагентовНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="ЗагрузитьНоменклатутру" parametersCount="1" startAddr="12">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗагрузитьНоменклатутруНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
 				</mf:clientModule>
 				<mf:serverWOContextModule version="1">
-					<bsch:cmdOpCode>1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>5,0,0,0,0,1,0,5,0,6,1,0,2,0,1,0,6,0,7,2,0,1,2,3,0,8,3,4,1,5,0,9,4,2,3,1,6,0,9,0,11,4,7,8,0,159,12,5,0,9,0,13,5,4,0,11,0,13,1,10,13,14,6,5,1,1,0,14,0,15,5,0,12,15,16,0,0,6,0,0,16,8,0,0,8,0,151,7,8,0,8,0,0,18,9,1,13,15,7,16,2,14,0,18,0,20,9,1,2,0,20,0,123,21,9,1,13,0,17,0,21,0,131,23,9,9,0,18,0,23,0,24,26,9,15,7,16,0,27,9,19,7,20,0,28,9,0,21,28,29,80,1,8,0,0,8,0,0,167,31,22,4,7,0,1,3,31,32,34,0,0</bsch:cmdOperand>
+					<bsch:cmdOpCode>1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,2,12,4,3,12,10,3,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,3,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>5,0,0,0,0,1,0,5,0,6,1,0,2,0,1,0,6,0,7,2,0,1,2,3,0,8,3,4,1,5,0,9,4,2,3,1,6,0,9,0,11,4,7,8,0,159,12,5,0,9,0,13,5,4,0,11,0,13,1,10,13,14,6,5,1,1,0,14,0,15,5,0,12,15,16,0,0,6,0,0,16,8,0,0,8,0,151,7,8,0,8,0,0,18,9,1,13,15,7,16,2,14,0,18,0,20,9,1,2,0,20,0,123,21,9,1,13,0,17,0,21,0,131,23,9,9,0,18,0,23,0,24,26,9,15,7,16,0,27,9,19,7,20,0,28,9,0,21,28,29,80,1,8,0,0,8,0,0,167,31,22,4,7,0,1,3,31,32,34,0,39,0,0,0,0,1,0,39,0,40,1,0,2,0,1,0,40,0,41,2,0,1,2,3,0,42,3,23,1,5,0,43,4,2,3,1,6,0,43,0,45,4,7,8,0,329,46,5,0,9,0,47,5,4,0,11,0,47,1,10,47,48,6,5,1,1,0,48,0,49,5,0,12,49,50,0,0,6,0,0,50,8,0,0,8,0,321,7,8,0,8,0,0,52,9,1,24,25,7,26,2,14,0,52,0,54,9,1,2,0,54,0,293,55,9,1,24,0,17,0,55,0,301,57,9,9,0,18,0,57,0,58,60,9,25,7,26,0,61,9,19,7,20,0,62,9,0,21,62,63,250,1,8,0,0,8,0,0,337,65,22,4,7,0,1,3,65,66,68,0,74,0,0,0,0,1,0,74,0,75,1,0,2,0,1,0,75,0,76,2,0,1,2,3,0,77,3,27,1,5,0,78,4,2,3,1,6,0,78,0,80,4,7,8,0,518,81,5,0,9,0,82,5,4,0,11,0,82,1,10,82,83,6,5,1,1,0,83,0,84,5,0,12,84,85,0,0,6,0,0,85,8,0,0,8,0,510,7,8,0,8,0,0,87,9,1,13,15,7,16,2,14,0,87,0,89,10,1,28,29,7,30,0,9,4,14,0,89,0,91,10,1,2,0,91,0,477,92,10,1,28,0,17,0,92,0,485,94,10,10,0,18,0,94,0,95,97,10,29,7,30,0,98,10,19,7,20,0,99,10,31,9,0,100,10,0,21,100,101,420,1,8,0,0,8,0,0,526,103,22,4,7,0,1,3,103,104,106,0,0</bsch:cmdOperand>
 					<bsch:constant>SАдресСервера</bsch:constant>
 					<bsch:constant>SПолучить</bsch:constant>
 					<bsch:constant>SПортСервера</bsch:constant>
@@ -959,9 +1014,18 @@
 					<bsch:constant>Sname</bsch:constant>
 					<bsch:constant>SЗаписать</bsch:constant>
 					<bsch:constant>SОшибка, код ошибки  - </bsch:constant>
+					<bsch:constant>S/server/hs/link/nomen</bsch:constant>
+					<bsch:constant>SНоменклатура</bsch:constant>
+					<bsch:constant>SАртикул</bsch:constant>
+					<bsch:constant>Sartik</bsch:constant>
+					<bsch:constant>S/server/hs/link/address</bsch:constant>
+					<bsch:constant>SАдресаДоставки</bsch:constant>
+					<bsch:constant>SКПП</bsch:constant>
+					<bsch:constant>Skpp</bsch:constant>
+					<bsch:constant>SВладелец</bsch:constant>
 					<bsch:variable name="Константы" isExternal="true"/>
 					<bsch:variable name="Справочники" isExternal="true"/>
-					<bsch:procedure name="ЗагрузитьНаСервере" parametersCount="0" startAddr="0">
+					<bsch:procedure name="ЗагрузитьКонтарагентовНаСервере" parametersCount="0" startAddr="0">
 						<bsch:variable name="АдресСервера" isLocal="true"/>
 						<bsch:variable name="ПортСервера" isLocal="true"/>
 						<bsch:variable name="Соединение" isLocal="true"/>
@@ -976,6 +1040,31 @@
 					<bsch:procedure name="ПрочитатьJSON" isFunction="true" isExternal="true" parametersCount="9" startAddr="0"/>
 					<bsch:procedure name="ЗначениеЗаполнено" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 					<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="ЗагрузитьНоменклатутруНаСервере" parametersCount="0" startAddr="170">
+						<bsch:variable name="АдресСервера" isLocal="true"/>
+						<bsch:variable name="ПортСервера" isLocal="true"/>
+						<bsch:variable name="Соединение" isLocal="true"/>
+						<bsch:variable name="Запрос" isLocal="true"/>
+						<bsch:variable name="Результат" isLocal="true"/>
+						<bsch:variable name="ЧтениеJSON" isLocal="true"/>
+						<bsch:variable name="СписокНоменклатура" isLocal="true"/>
+						<bsch:variable name="ТекСтрока" isLocal="true"/>
+						<bsch:variable name="0ТекСтрока" isLocal="true"/>
+						<bsch:variable name="Номенклатура" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗагрузитьАдресаНаСервере" parametersCount="0" startAddr="340">
+						<bsch:variable name="АдресСервера" isLocal="true"/>
+						<bsch:variable name="ПортСервера" isLocal="true"/>
+						<bsch:variable name="Соединение" isLocal="true"/>
+						<bsch:variable name="Запрос" isLocal="true"/>
+						<bsch:variable name="Результат" isLocal="true"/>
+						<bsch:variable name="ЧтениеJSON" isLocal="true"/>
+						<bsch:variable name="СписокАдресаДоставки" isLocal="true"/>
+						<bsch:variable name="ТекСтрока" isLocal="true"/>
+						<bsch:variable name="0ТекСтрока" isLocal="true"/>
+						<bsch:variable name="Контрагент" isLocal="true"/>
+						<bsch:variable name="АдресаДоставки" isLocal="true"/>
+					</bsch:procedure>
 				</mf:serverWOContextModule>
 				<mf:clientServerWOContextModule version="1">
 					<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -989,24 +1078,56 @@
 						<mf:main>true</mf:main>
 					</mf:attribute>
 				</mf:attributes>
-				<mf:command name="Загрузить">
+				<mf:command name="ЗагрузитьКонтраганетов">
 					<mf:title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Загрузить</v8:content>
+							<v8:content>Загрузить контраганетов</v8:content>
 						</v8:item>
 					</mf:title>
-					<mf:handlerName>Загрузить</mf:handlerName>
+					<mf:handlerName>ЗагрузитьКонтарагентов</mf:handlerName>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Загрузить</v8:content>
+							<v8:content>Загрузить контраганетов</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="ЗагрузитьНоменклатутру">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить номенклатутру</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ЗагрузитьНоменклатутру</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить номенклатутру</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="ЗагрузитьАдреса">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить адреса</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ЗагрузитьАдреса</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить адреса</v8:content>
 						</v8:item>
 					</mf:tooltip>
 				</mf:command>
 				<mf:mainElement>
 					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
-					<mf:button name="Загрузить" type="UsualButton" commandName="Form.Command.Загрузить"/>
+					<mf:button name="ЗагрузитьКонтраганетов" type="UsualButton" commandName="Form.Command.ЗагрузитьКонтраганетов"/>
+					<mf:button name="ЗагрузитьНоменклатутру" type="UsualButton" commandName="Form.Command.ЗагрузитьНоменклатутру"/>
+					<mf:button name="ЗагрузитьАдреса" type="UsualButton" commandName="Form.Command.ЗагрузитьАдреса"/>
 				</mf:mainElement>
 			</form>
 		</form>
@@ -1063,4 +1184,16 @@
 		<permission>FileExchangeWithPersonalComputer</permission>
 		<use>false</use>
 	</requiredPermission>
+	<desktopCommandInterface>
+		<CommandVisibility name="Constant.АдресСервера.StandardCommand.Open">
+			<Visibility2>
+				<mf:common>false</mf:common>
+			</Visibility2>
+		</CommandVisibility>
+		<CommandVisibility name="Constant.ПортСервера.StandardCommand.Open">
+			<Visibility2>
+				<mf:common>false</mf:common>
+			</Visibility2>
+		</CommandVisibility>
+	</desktopCommandInterface>
 </MobileApp>
