@@ -160,9 +160,14 @@
 			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 			<bsch:cmdOperand>0,0</bsch:cmdOperand>
 		</objectModule>
+		<hierarchical>true</hierarchical>
+		<limitLevelCount>true</limitLevelCount>
+		<levelCount>3</levelCount>
 		<foldersOnTop>true</foldersOnTop>
 		<inputByString>Description</inputByString>
 		<inputByString>Code</inputByString>
+		<defaultChoiceForm>Catalog.Номенклатура.Form.ФормаВыбора</defaultChoiceForm>
+		<defaultListForm>Catalog.Номенклатура.Form.ФормаСписка</defaultListForm>
 		<attribute name="Артикул" id="fa8aa625-b63f-4bdd-933b-25d79ecf6429">
 			<synonym>
 				<v8:item>
@@ -179,6 +184,147 @@
 				</v8:NumberQualifiers>
 			</type>
 		</attribute>
+		<form name="ФормаСписка" id="1aa22400-7579-4994-88ae-b78d2788b289">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма списка</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Список">
+						<mf:type>
+							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
+						</mf:type>
+						<mf:extInformation>
+							<mf:mainTable>Catalog.Номенклатура</mf:mainTable>
+							<mf:mainTableCategory>1</mf:mainTableCategory>
+						</mf:extInformation>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:group name="СписокКомпоновщикНастроекПользовательскиеНастройки" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа пользовательских настроек</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:verticalStretch>false</mf:verticalStretch>
+						<mf:usualData group="Vertical">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+					</mf:group>
+					<mf:table name="Список" dataPath="Список" defaultItem="true">
+						<mf:initialTreeView>ExpandTopLevel</mf:initialTreeView>
+						<mf:rowPictureDataPath>Список.DefaultPicture</mf:rowPictureDataPath>
+						<mf:useAlternationRowColor>true</mf:useAlternationRowColor>
+						<mf:commandBarLocation>None</mf:commandBarLocation>
+						<mf:autoCommandBar name="СписокКоманднаяПанель" type="AutoCommandBar">
+							<mf:autoMenuData>
+								<mf:autofill>false</mf:autofill>
+							</mf:autoMenuData>
+						</mf:autoCommandBar>
+						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:field name="Наименование" kind="LabelField" dataPath="Список.Description" defaultItem="true">
+							<mf:contextMenu name="НаименованиеКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Код" kind="LabelField" dataPath="Список.Code">
+							<mf:contextMenu name="КодКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:table>
+				</mf:mainElement>
+			</form>
+		</form>
+		<form name="ФормаВыбора" id="b9648343-640e-4c3c-8986-85e8b23859a9">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма выбора</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Список">
+						<mf:type>
+							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
+						</mf:type>
+						<mf:extInformation>
+							<mf:mainTable>Catalog.Номенклатура</mf:mainTable>
+							<mf:mainTableCategory>1</mf:mainTableCategory>
+						</mf:extInformation>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:windowOpeningMode>LockOwnerWindow</mf:windowOpeningMode>
+					<mf:group name="СписокКомпоновщикНастроекПользовательскиеНастройки" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа пользовательских настроек</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:verticalStretch>false</mf:verticalStretch>
+						<mf:usualData group="Vertical">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+					</mf:group>
+					<mf:table name="Список" dataPath="Список" defaultItem="true">
+						<mf:choiceMode>true</mf:choiceMode>
+						<mf:initialTreeView>ExpandTopLevel</mf:initialTreeView>
+						<mf:rowPictureDataPath>Список.DefaultPicture</mf:rowPictureDataPath>
+						<mf:useAlternationRowColor>true</mf:useAlternationRowColor>
+						<mf:commandBarLocation>None</mf:commandBarLocation>
+						<mf:autoCommandBar name="СписокКоманднаяПанель" type="AutoCommandBar">
+							<mf:autoMenuData>
+								<mf:autofill>false</mf:autofill>
+							</mf:autoMenuData>
+						</mf:autoCommandBar>
+						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:field name="Наименование" kind="LabelField" dataPath="Список.Description" defaultItem="true">
+							<mf:contextMenu name="НаименованиеКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:table>
+				</mf:mainElement>
+			</form>
+		</form>
 	</catalog>
 	<catalog name="Контрагенты" id="8525864f-566b-4dc7-bd52-a73605c134df">
 		<synonym>
@@ -748,6 +894,17 @@
 				</app:item>
 			</choiceParamLinks>
 		</attribute>
+		<attribute name="Статус" id="5542bac3-b295-4ec9-a46c-54a14a186f24">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>cfg:EnumRef.СтатусДокументаЗаказы</v8:Type>
+			</type>
+		</attribute>
 		<tabularSection name="Номенклатура" id="50e29da9-d5b3-417f-ab43-8d944e5dcf9a">
 			<synonym>
 				<v8:item>
@@ -902,9 +1059,20 @@
 				</mf:attributes>
 				<mf:mainElement>
 					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
-					<mf:field name="Номер" kind="InputField" dataPath="Объект.Number">
-						<mf:contextMenu name="НомерКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
+					<mf:group name="Группа1" type="UsualGroup">
+						<mf:usualData group="AlwaysHorizontal" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:behavior>Collapsible</mf:behavior>
+						</mf:usualData>
+						<mf:field name="Номер" kind="InputField" dataPath="Объект.Number">
+							<mf:contextMenu name="НомерКонтекстноеМеню" type="ContextMenu"/>
+							<mf:groupHorizontalAlign>Left</mf:groupHorizontalAlign>
+						</mf:field>
+						<mf:field name="Статус" kind="LabelField" dataPath="Объект.Статус">
+							<mf:contextMenu name="СтатусКонтекстноеМеню" type="ContextMenu"/>
+							<mf:groupHorizontalAlign>Left</mf:groupHorizontalAlign>
+						</mf:field>
+					</mf:group>
 					<mf:field name="Дата" kind="InputField" dataPath="Объект.Date">
 						<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
 					</mf:field>
@@ -933,6 +1101,62 @@
 			</form>
 		</form>
 	</document>
+	<enum name="СтатусДокументаЗаказы" id="19414bc7-6741-47f1-8ae7-ff62574008f1">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Статус документа заказы</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="EnumRef.СтатусДокументаЗаказы" category="Ref">
+			<xr:TypeId>a2061d1e-fd61-48c4-bbbd-fa0ae34947f9</xr:TypeId>
+			<xr:ValueId>30eda215-22f0-4a86-8131-eeb4762f9d53</xr:ValueId>
+		</generatedType>
+		<generatedType name="EnumManager.СтатусДокументаЗаказы" category="Manager">
+			<xr:TypeId>eefe316b-272f-4527-ad4c-a660668c3831</xr:TypeId>
+			<xr:ValueId>ff0a2f43-acc7-4eda-a9d5-7245438de151</xr:ValueId>
+		</generatedType>
+		<generatedType name="EnumList.СтатусДокументаЗаказы" category="List">
+			<xr:TypeId>0f0d5450-343a-40c1-bdcf-6bf8a4c28852</xr:TypeId>
+			<xr:ValueId>9ff5cf45-31ce-4292-aa5a-cad73630d57e</xr:ValueId>
+		</generatedType>
+		<managerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</managerModule>
+		<value name="Создан" id="0a686904-24e6-4d67-bc3b-b3703c089b47">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создан</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+		<value name="Выгружен" id="d0955392-776e-4562-b71f-dd0a03d3f25e">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружен</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+		<value name="Отправлен" id="f58075b3-d086-44e5-a824-8440a7707fb7">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправлен</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+		<value name="Получен" id="02f33b20-f805-43aa-8010-1880140e6896">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получен</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+	</enum>
 	<dataProcessor name="Загрузка" id="259ccb5e-5d6d-47fe-8093-56212359b38f">
 		<synonym>
 			<v8:item>
@@ -969,35 +1193,40 @@
 					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 					<bsch:cmdOperand>0,0</bsch:cmdOperand>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="18">
-					<bsch:cmdOpCode>1,18,19,1,1,22,1,18,19,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>110,0,1,110,111,0,115,0,3,115,116,0,120,0,5,120,121,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="24">
+					<bsch:cmdOpCode>1,18,19,1,1,22,1,18,19,1,1,22,1,18,19,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>161,0,1,161,162,0,166,0,3,166,167,0,171,0,5,171,172,0,179,0,7,179,180,0,0,0</bsch:cmdOperand>
 					<bsch:procedure name="ЗагрузитьАдреса" parametersCount="1" startAddr="0">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 					<bsch:procedure name="ЗагрузитьАдресаНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
-					<bsch:procedure name="ЗагрузитьКонтарагентов" parametersCount="1" startAddr="6">
+					<bsch:procedure name="ЗагрузитьКонтрагентов" parametersCount="1" startAddr="6">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ЗагрузитьКонтарагентовНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="ЗагрузитьКонтрагентовНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
 					<bsch:procedure name="ЗагрузитьНоменклатутру" parametersCount="1" startAddr="12">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 					<bsch:procedure name="ЗагрузитьНоменклатутруНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="ЗагрузитьГруппыНоменклатуры" parametersCount="1" startAddr="18">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗагрузитьГруппыНоменклатурыНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
 				</mf:clientModule>
 				<mf:serverWOContextModule version="1">
-					<bsch:cmdOpCode>1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,2,12,4,3,12,10,3,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,3,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>5,0,0,0,0,1,0,5,0,6,1,0,2,0,1,0,6,0,7,2,0,1,2,3,0,8,3,4,1,5,0,9,4,2,3,1,6,0,9,0,11,4,7,8,0,159,12,5,0,9,0,13,5,4,0,11,0,13,1,10,13,14,6,5,1,1,0,14,0,15,5,0,12,15,16,0,0,6,0,0,16,8,0,0,8,0,151,7,8,0,8,0,0,18,9,1,13,15,7,16,2,14,0,18,0,20,9,1,2,0,20,0,123,21,9,1,13,0,17,0,21,0,131,23,9,9,0,18,0,23,0,24,26,9,15,7,16,0,27,9,19,7,20,0,28,9,0,21,28,29,80,1,8,0,0,8,0,0,167,31,22,4,7,0,1,3,31,32,34,0,39,0,0,0,0,1,0,39,0,40,1,0,2,0,1,0,40,0,41,2,0,1,2,3,0,42,3,23,1,5,0,43,4,2,3,1,6,0,43,0,45,4,7,8,0,329,46,5,0,9,0,47,5,4,0,11,0,47,1,10,47,48,6,5,1,1,0,48,0,49,5,0,12,49,50,0,0,6,0,0,50,8,0,0,8,0,321,7,8,0,8,0,0,52,9,1,24,25,7,26,2,14,0,52,0,54,9,1,2,0,54,0,293,55,9,1,24,0,17,0,55,0,301,57,9,9,0,18,0,57,0,58,60,9,25,7,26,0,61,9,19,7,20,0,62,9,0,21,62,63,250,1,8,0,0,8,0,0,337,65,22,4,7,0,1,3,65,66,68,0,74,0,0,0,0,1,0,74,0,75,1,0,2,0,1,0,75,0,76,2,0,1,2,3,0,77,3,27,1,5,0,78,4,2,3,1,6,0,78,0,80,4,7,8,0,518,81,5,0,9,0,82,5,4,0,11,0,82,1,10,82,83,6,5,1,1,0,83,0,84,5,0,12,84,85,0,0,6,0,0,85,8,0,0,8,0,510,7,8,0,8,0,0,87,9,1,13,15,7,16,2,14,0,87,0,89,10,1,28,29,7,30,0,9,4,14,0,89,0,91,10,1,2,0,91,0,477,92,10,1,28,0,17,0,92,0,485,94,10,10,0,18,0,94,0,95,97,10,29,7,30,0,98,10,19,7,20,0,99,10,31,9,0,100,10,0,21,100,101,420,1,8,0,0,8,0,0,526,103,22,4,7,0,1,3,103,104,106,0,0</bsch:cmdOperand>
+					<bsch:cmdOpCode>1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,3,18,51,16,1,3,3,3,18,21,5,1,16,1,3,17,45,39,1,22,1,3,4,18,19,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,1,3,12,3,12,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,1,3,4,18,19,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,1,3,12,3,12,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,4,33,29,40,1,3,12,2,12,3,12,18,21,5,1,16,39,1,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,1,3,4,18,19,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,1,3,12,3,12,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,4,33,29,40,1,3,12,2,12,3,12,18,21,5,1,16,39,1,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,2,12,4,3,12,10,3,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,3,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>3,1,0,0,0,1,0,3,0,4,2,0,2,0,1,0,4,0,5,3,1,2,2,3,0,6,4,0,1,4,0,7,5,3,4,1,5,0,7,0,8,5,0,0,45,9,0,14,0,6,1,0,0,14,0,16,0,7,8,0,179,17,1,0,9,0,18,1,0,0,11,0,18,1,10,18,19,2,1,1,2,0,19,0,20,1,0,12,20,21,0,0,2,0,0,21,4,0,0,4,0,171,3,4,0,4,0,0,23,5,1,13,3,15,1,14,0,23,0,25,5,1,3,0,25,0,143,26,5,1,13,0,16,0,26,0,27,5,17,3,15,0,151,29,5,5,0,18,0,29,0,30,32,5,17,3,19,0,33,5,20,3,21,0,34,5,0,22,34,35,95,1,4,0,0,4,0,0,187,37,23,0,7,0,1,4,37,38,40,0,45,0,24,1,0,0,45,0,47,0,7,8,0,343,49,1,0,9,0,50,1,0,0,11,0,50,1,10,50,51,2,1,1,2,0,51,0,52,1,0,12,52,54,0,0,2,0,0,54,4,0,0,4,0,335,3,4,0,4,0,0,56,5,1,25,3,15,1,14,0,56,0,58,5,1,3,0,58,0,286,59,5,1,25,0,16,0,59,0,60,5,26,3,15,0,294,62,5,5,0,18,0,62,0,63,65,5,27,3,28,0,66,5,20,3,21,0,68,3,29,30,0,0,327,69,5,31,1,25,3,29,1,14,0,69,0,327,70,72,5,0,22,72,73,238,1,4,0,0,4,0,0,351,75,23,0,7,0,1,4,75,76,78,0,83,0,32,1,0,0,83,0,86,0,7,8,0,501,88,1,0,9,0,89,1,0,0,11,0,89,1,10,89,90,2,1,1,2,0,90,0,91,1,0,12,91,93,0,0,2,0,0,93,4,0,0,4,0,493,3,4,0,4,0,0,95,5,1,25,3,15,1,14,0,95,0,97,5,1,3,0,97,0,450,98,5,1,25,0,33,0,98,0,99,5,26,3,15,0,458,101,5,5,0,18,0,101,0,102,105,5,20,3,21,0,108,3,29,30,0,0,485,109,5,31,1,25,3,29,1,14,0,109,0,485,110,112,5,0,22,112,114,402,1,4,0,0,4,0,0,509,116,23,0,7,0,1,4,116,117,119,0,125,0,0,0,0,1,0,125,0,126,1,0,2,0,1,0,126,0,127,2,0,1,2,3,0,128,3,34,1,4,0,129,4,2,3,1,5,0,129,0,131,4,7,8,0,690,132,5,0,9,0,133,5,4,0,11,0,133,1,10,133,134,6,5,1,2,0,134,0,135,5,0,12,135,136,0,0,6,0,0,136,8,0,0,8,0,682,7,8,0,8,0,0,138,9,1,13,17,7,19,2,35,0,138,0,140,10,1,36,37,7,38,0,9,4,35,0,140,0,142,10,1,3,0,142,0,649,143,10,1,36,0,16,0,143,0,657,145,10,10,0,18,0,145,0,146,148,10,37,7,38,0,149,10,20,7,21,0,150,10,39,9,0,151,10,0,22,151,152,592,1,8,0,0,8,0,0,698,154,23,4,7,0,1,4,154,155,157,0,0</bsch:cmdOperand>
 					<bsch:constant>SАдресСервера</bsch:constant>
 					<bsch:constant>SПолучить</bsch:constant>
 					<bsch:constant>SПортСервера</bsch:constant>
 					<bsch:constant>SHTTPСоединение</bsch:constant>
-					<bsch:constant>S/server/hs/link/partner</bsch:constant>
 					<bsch:constant>SHTTPЗапрос</bsch:constant>
 					<bsch:constant>SОтправитьДляОбработки</bsch:constant>
+					<bsch:constant>S/server/hs/link/partner</bsch:constant>
 					<bsch:constant>SКодСостояния</bsch:constant>
 					<bsch:constant>N200</bsch:constant>
 					<bsch:constant>SЧтениеJSON</bsch:constant>
@@ -1005,31 +1234,44 @@
 					<bsch:constant>SПолучитьТелоКакСтроку</bsch:constant>
 					<bsch:constant>SЗакрыть</bsch:constant>
 					<bsch:constant>SКонтрагенты</bsch:constant>
-					<bsch:constant>SНайтиПоРеквизиту</bsch:constant>
-					<bsch:constant>SИНН</bsch:constant>
-					<bsch:constant>Sinn</bsch:constant>
+					<bsch:constant>SНайтиПоКоду</bsch:constant>
+					<bsch:constant>Sid</bsch:constant>
 					<bsch:constant>SСоздатьЭлемент</bsch:constant>
+					<bsch:constant>SИНН</bsch:constant>
 					<bsch:constant>SПолучитьОбъект</bsch:constant>
+					<bsch:constant>Sinn</bsch:constant>
 					<bsch:constant>SНаименование</bsch:constant>
 					<bsch:constant>Sname</bsch:constant>
 					<bsch:constant>SЗаписать</bsch:constant>
 					<bsch:constant>SОшибка, код ошибки  - </bsch:constant>
 					<bsch:constant>S/server/hs/link/nomen</bsch:constant>
 					<bsch:constant>SНоменклатура</bsch:constant>
+					<bsch:constant>SКод</bsch:constant>
 					<bsch:constant>SАртикул</bsch:constant>
 					<bsch:constant>Sartik</bsch:constant>
+					<bsch:constant>Sgr</bsch:constant>
+					<bsch:constant>SНД</bsch:constant>
+					<bsch:constant>SРодитель</bsch:constant>
+					<bsch:constant>S/server/hs/link/grnom</bsch:constant>
+					<bsch:constant>SСоздатьГруппу</bsch:constant>
 					<bsch:constant>S/server/hs/link/address</bsch:constant>
+					<bsch:constant>SНайтиПоРеквизиту</bsch:constant>
 					<bsch:constant>SАдресаДоставки</bsch:constant>
 					<bsch:constant>SКПП</bsch:constant>
 					<bsch:constant>Skpp</bsch:constant>
 					<bsch:constant>SВладелец</bsch:constant>
 					<bsch:variable name="Константы" isExternal="true"/>
 					<bsch:variable name="Справочники" isExternal="true"/>
-					<bsch:procedure name="ЗагрузитьКонтарагентовНаСервере" parametersCount="0" startAddr="0">
+					<bsch:procedure name="ЗагрузитьДанные" isFunction="true" parametersCount="1" startAddr="0">
+						<bsch:variable name="ТекущаяСсылка" isLocal="true" isParam="true"/>
 						<bsch:variable name="АдресСервера" isLocal="true"/>
 						<bsch:variable name="ПортСервера" isLocal="true"/>
 						<bsch:variable name="Соединение" isLocal="true"/>
 						<bsch:variable name="Запрос" isLocal="true"/>
+						<bsch:variable name="Результат" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗагрузитьКонтрагентовНаСервере" parametersCount="0" startAddr="47">
 						<bsch:variable name="Результат" isLocal="true"/>
 						<bsch:variable name="ЧтениеJSON" isLocal="true"/>
 						<bsch:variable name="СписокКонтрагенты" isLocal="true"/>
@@ -1040,11 +1282,7 @@
 					<bsch:procedure name="ПрочитатьJSON" isFunction="true" isExternal="true" parametersCount="9" startAddr="0"/>
 					<bsch:procedure name="ЗначениеЗаполнено" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 					<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
-					<bsch:procedure name="ЗагрузитьНоменклатутруНаСервере" parametersCount="0" startAddr="170">
-						<bsch:variable name="АдресСервера" isLocal="true"/>
-						<bsch:variable name="ПортСервера" isLocal="true"/>
-						<bsch:variable name="Соединение" isLocal="true"/>
-						<bsch:variable name="Запрос" isLocal="true"/>
+					<bsch:procedure name="ЗагрузитьНоменклатутруНаСервере" parametersCount="0" startAddr="190">
 						<bsch:variable name="Результат" isLocal="true"/>
 						<bsch:variable name="ЧтениеJSON" isLocal="true"/>
 						<bsch:variable name="СписокНоменклатура" isLocal="true"/>
@@ -1052,7 +1290,15 @@
 						<bsch:variable name="0ТекСтрока" isLocal="true"/>
 						<bsch:variable name="Номенклатура" isLocal="true"/>
 					</bsch:procedure>
-					<bsch:procedure name="ЗагрузитьАдресаНаСервере" parametersCount="0" startAddr="340">
+					<bsch:procedure name="ЗагрузитьГруппыНоменклатурыНаСервере" parametersCount="0" startAddr="354">
+						<bsch:variable name="Результат" isLocal="true"/>
+						<bsch:variable name="ЧтениеJSON" isLocal="true"/>
+						<bsch:variable name="СписокНоменклатура" isLocal="true"/>
+						<bsch:variable name="ТекСтрока" isLocal="true"/>
+						<bsch:variable name="0ТекСтрока" isLocal="true"/>
+						<bsch:variable name="Номенклатура" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗагрузитьАдресаНаСервере" parametersCount="0" startAddr="512">
 						<bsch:variable name="АдресСервера" isLocal="true"/>
 						<bsch:variable name="ПортСервера" isLocal="true"/>
 						<bsch:variable name="Соединение" isLocal="true"/>
@@ -1078,18 +1324,18 @@
 						<mf:main>true</mf:main>
 					</mf:attribute>
 				</mf:attributes>
-				<mf:command name="ЗагрузитьКонтраганетов">
+				<mf:command name="ЗагрузитьКонтрагантов">
 					<mf:title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Загрузить контраганетов</v8:content>
+							<v8:content>Загрузить контрагантов</v8:content>
 						</v8:item>
 					</mf:title>
-					<mf:handlerName>ЗагрузитьКонтарагентов</mf:handlerName>
+					<mf:handlerName>ЗагрузитьКонтрагентов</mf:handlerName>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Загрузить контраганетов</v8:content>
+							<v8:content>Загрузить контрагантов</v8:content>
 						</v8:item>
 					</mf:tooltip>
 				</mf:command>
@@ -1123,11 +1369,27 @@
 						</v8:item>
 					</mf:tooltip>
 				</mf:command>
+				<mf:command name="ЗагрузитьГруппыНоменклатуры">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить группы номенклатуры</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ЗагрузитьГруппыНоменклатуры</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузить группы номенклатуры</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
 				<mf:mainElement>
 					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
-					<mf:button name="ЗагрузитьКонтраганетов" type="UsualButton" commandName="Form.Command.ЗагрузитьКонтраганетов"/>
+					<mf:button name="ЗагрузитьКонтраганетов" type="UsualButton" commandName="Form.Command.ЗагрузитьКонтрагантов"/>
 					<mf:button name="ЗагрузитьНоменклатутру" type="UsualButton" commandName="Form.Command.ЗагрузитьНоменклатутру"/>
 					<mf:button name="ЗагрузитьАдреса" type="UsualButton" commandName="Form.Command.ЗагрузитьАдреса"/>
+					<mf:button name="ЗагрузитьГруппыНоменклатуры" type="UsualButton" commandName="Form.Command.ЗагрузитьГруппыНоменклатуры"/>
 				</mf:mainElement>
 			</form>
 		</form>
