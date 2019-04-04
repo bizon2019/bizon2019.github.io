@@ -164,6 +164,7 @@
 		<limitLevelCount>true</limitLevelCount>
 		<levelCount>3</levelCount>
 		<foldersOnTop>true</foldersOnTop>
+		<descriptionLength>50</descriptionLength>
 		<inputByString>Description</inputByString>
 		<inputByString>Code</inputByString>
 		<defaultChoiceForm>Catalog.Номенклатура.Form.ФормаВыбора</defaultChoiceForm>
@@ -685,6 +686,7 @@
 		</objectModule>
 		<foldersOnTop>true</foldersOnTop>
 		<owner>Catalog.Контрагенты</owner>
+		<descriptionLength>50</descriptionLength>
 		<inputByString>Description</inputByString>
 		<inputByString>Code</inputByString>
 		<defaultObjectForm>Catalog.АдресаДоставки.Form.ФормаЭлемента</defaultObjectForm>
@@ -1031,17 +1033,37 @@
 				</v8:item>
 			</synonym>
 			<form>
-				<mf:serverModule version="1" startAddr="0">
-					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				<mf:serverModule version="1" startAddr="19">
+					<bsch:cmdOpCode>1,2,12,18,21,5,1,40,1,2,12,2,12,12,16,39,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>5,0,0,0,1,0,5,16,6,1,2,2,3,4,0,16,7,9,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SКлюч</bsch:constant>
+					<bsch:constant>SПустая</bsch:constant>
+					<bsch:constant>SСтатус</bsch:constant>
+					<bsch:constant>SСтатусДокументаЗаказы</bsch:constant>
+					<bsch:constant>SСоздан</bsch:constant>
+					<bsch:variable name="Параметры" isExternal="true"/>
+					<bsch:variable name="Объект" isExternal="true"/>
+					<bsch:variable name="Перечисления" isExternal="true"/>
+					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="0">
-					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="6">
+					<bsch:cmdOpCode>1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>18,0,1,18,19,0,0,0</bsch:cmdOperand>
+					<bsch:procedure name="ОтправитьНаСервер" parametersCount="1" startAddr="0">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ОтправитьНаСерверНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
 				</mf:clientModule>
 				<mf:serverWOContextModule version="1">
-					<bsch:cmdOpCode>22</bsch:cmdOpCode>
-					<bsch:cmdOperand>0</bsch:cmdOperand>
+					<bsch:cmdOpCode>1,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>14,0,0</bsch:cmdOperand>
+					<bsch:procedure name="ОтправитьНаСерверНаСервере" parametersCount="0" startAddr="0"/>
 				</mf:serverWOContextModule>
 				<mf:clientServerWOContextModule version="1">
 					<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -1057,8 +1079,24 @@
 						<mf:useAalways>RegisterRecords</mf:useAalways>
 					</mf:attribute>
 				</mf:attributes>
+				<mf:command name="Отправить">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправить</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ОтправитьНаСервер</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправить</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
 				<mf:mainElement>
 					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
 					<mf:group name="Группа1" type="UsualGroup">
 						<mf:usualData group="AlwaysHorizontal" representation="None">
 							<mf:showTitle>false</mf:showTitle>
