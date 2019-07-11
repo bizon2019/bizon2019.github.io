@@ -25,6 +25,149 @@
 	<startPageWorkingArea>
 		<workingAreaTemplate>OneColumn</workingAreaTemplate>
 	</startPageWorkingArea>
+	<commonModule name="ИнтеграцияВызовСервера" id="c2206d1a-4093-4c3e-80e4-adc64448c8a5">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Интеграция вызов сервера</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,56,16,1,3,2,12,18,21,5,1,56,16,1,3,3,3,3,3,18,51,16,1,3,3,18,51,16,1,3,3,18,20,1,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,4,18,19,1,1,3,7,16,39,1,4,3,12,24,18,19,1,1,3,6,16,1,1,22,1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,56,16,1,3,2,12,18,21,5,1,56,16,1,3,3,3,3,3,18,51,16,1,3,3,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,3,7,16,39,1,3,6,16,1,1,22,1,4,3,3,18,19,1,1,3,40,1,3,4,16,1,3,4,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,1,3,12,3,12,16,1,3,3,4,24,16,39,1,3,3,18,21,5,1,16,1,3,3,4,24,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,1,4,18,19,1,1,4,3,24,18,19,1,1,4,3,24,18,19,1,39,1,4,18,19,1,1,1,22,1,4,3,3,18,19,1,1,3,40,1,3,4,16,1,3,4,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,2,12,4,3,12,10,3,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,1,3,3,4,24,16,39,1,3,3,18,21,5,1,16,1,3,3,4,24,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,3,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,1,4,18,19,1,1,4,3,24,18,19,1,1,4,3,24,18,19,1,39,1,4,18,19,1,1,1,22,1,4,3,3,18,19,1,1,3,40,1,3,4,16,1,3,4,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,1,3,12,3,12,16,1,3,3,4,24,16,39,1,3,3,18,21,5,1,16,1,3,3,4,24,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,4,33,29,40,1,3,12,2,12,3,12,18,21,5,1,16,39,1,1,3,18,20,1,1,39,50,3,8,16,3,8,16,1,4,18,19,1,1,4,3,24,18,19,1,1,4,3,24,18,19,1,39,1,4,18,19,1,1,1,22,1,4,3,3,18,19,1,1,3,40,1,3,4,16,1,3,4,16,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,1,3,12,3,12,16,1,3,3,4,24,16,39,1,3,3,18,21,5,1,16,1,3,3,4,24,16,1,1,3,12,3,12,16,1,3,12,4,33,29,40,1,3,12,2,12,3,12,18,21,5,1,16,39,1,1,3,18,20,1,1,39,50,3,8,16,3,8,16,1,4,18,19,1,1,4,3,24,18,19,1,1,4,3,24,18,19,1,39,1,4,18,19,1,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>4,3,0,0,0,1,0,4,0,5,4,0,2,0,1,0,5,0,6,5,0,3,0,1,0,6,0,0,7,6,0,4,0,1,0,7,0,0,9,7,3,4,5,6,4,5,0,10,8,0,1,6,0,11,8,1,1,7,11,12,9,7,8,1,8,0,12,0,13,9,9,10,0,84,14,11,1,1,14,15,2,0,0,96,17,12,9,9,0,1,1,17,19,2,0,0,20,22,0,28,3,0,0,0,1,0,28,0,29,4,0,2,0,1,0,29,0,30,5,0,3,0,1,0,30,0,0,31,6,0,4,0,1,0,31,0,0,33,7,3,4,5,6,4,5,0,34,8,0,1,6,0,35,9,7,8,1,8,0,35,0,37,9,9,10,0,200,38,10,0,13,0,39,10,9,0,15,0,39,1,14,39,40,2,10,1,3,0,40,0,41,10,0,16,41,43,1,0,0,204,47,1,0,0,48,51,0,57,17,0,1,3,2,57,59,0,346,60,2,18,0,61,3,18,0,62,0,0,1,0,0,62,5,0,0,5,0,319,4,5,0,5,0,0,64,6,1,19,4,21,1,20,0,64,0,66,6,1,5,0,66,0,285,67,6,1,19,0,22,0,67,0,68,6,23,4,21,0,69,2,2,24,0,0,299,71,6,6,0,25,0,71,0,72,3,3,24,0,0,73,75,6,26,4,27,0,76,6,28,4,29,0,77,6,0,30,77,78,231,1,5,0,0,5,0,0,80,31,1,1,80,81,32,3,0,1,1,81,82,33,2,0,1,1,82,351,85,34,1,1,85,86,88,0,94,35,0,1,3,2,94,96,0,507,97,2,18,0,98,3,18,0,100,0,0,1,0,0,100,5,0,0,5,0,480,4,5,0,5,0,0,102,6,1,19,26,4,27,2,36,0,102,0,104,7,1,37,38,4,39,0,6,4,36,0,104,0,106,7,1,5,0,106,0,441,107,7,1,37,0,22,0,107,0,108,2,2,24,0,0,455,110,7,7,0,25,0,110,0,111,3,3,24,0,0,112,114,7,38,4,39,0,115,7,28,4,29,0,116,7,40,6,0,117,7,0,30,117,118,378,1,5,0,0,5,0,0,120,41,1,1,120,121,32,3,0,1,1,121,122,33,2,0,1,1,122,512,124,42,1,1,124,125,127,0,132,43,0,1,3,2,132,134,0,675,135,2,18,0,136,3,18,0,138,0,0,1,0,0,138,5,0,0,5,0,648,4,5,0,5,0,0,140,6,1,44,4,21,1,20,0,140,0,142,6,1,5,0,142,0,593,143,6,1,44,0,22,0,143,0,144,6,23,4,21,0,145,2,2,24,0,0,607,147,6,6,0,25,0,147,0,148,3,3,24,0,0,149,151,6,45,4,46,0,152,6,28,4,29,0,154,4,47,48,0,0,640,155,6,49,1,44,4,47,1,20,0,155,0,640,156,158,6,0,30,158,159,539,1,5,0,0,5,0,0,161,50,1,1,161,162,32,3,0,1,1,162,163,33,2,0,1,1,163,680,165,51,1,1,165,166,168,0,174,52,0,1,3,2,174,177,0,837,178,2,18,0,179,3,18,0,181,0,0,1,0,0,181,5,0,0,5,0,810,4,5,0,5,0,0,183,6,1,44,4,21,1,20,0,183,0,185,6,1,5,0,185,0,761,186,6,1,44,0,53,0,186,0,187,6,23,4,21,0,188,2,2,24,0,0,775,190,6,6,0,25,0,190,0,191,3,3,24,0,0,192,195,6,28,4,29,0,198,4,47,48,0,0,802,199,6,49,1,44,4,47,1,20,0,199,0,802,200,202,6,0,30,202,204,707,1,5,0,0,5,0,0,205,54,1,1,205,206,55,3,0,1,1,206,207,56,2,0,1,1,207,842,209,51,1,1,209,210,212,0,0</bsch:cmdOperand>
+			<bsch:constant>SАдресСервера</bsch:constant>
+			<bsch:constant>SПолучить</bsch:constant>
+			<bsch:constant>SПортСервера</bsch:constant>
+			<bsch:constant>SЛогин</bsch:constant>
+			<bsch:constant>SПароль</bsch:constant>
+			<bsch:constant>SHTTPСоединение</bsch:constant>
+			<bsch:constant>SHTTPЗапрос</bsch:constant>
+			<bsch:constant>SУстановитьТелоИзСтроки</bsch:constant>
+			<bsch:constant>SОтправитьДляОбработки</bsch:constant>
+			<bsch:constant>SКодСостояния</bsch:constant>
+			<bsch:constant>N200</bsch:constant>
+			<bsch:constant>SДанные переданы успешно</bsch:constant>
+			<bsch:constant>SКод ошибки  - </bsch:constant>
+			<bsch:constant>SЧтениеJSON</bsch:constant>
+			<bsch:constant>SУстановитьСтроку</bsch:constant>
+			<bsch:constant>SПолучитьТелоКакСтроку</bsch:constant>
+			<bsch:constant>SЗакрыть</bsch:constant>
+			<bsch:constant>S/server/hs/link/partner</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>SКонтрагенты</bsch:constant>
+			<bsch:constant>SНайтиПоКоду</bsch:constant>
+			<bsch:constant>Sid</bsch:constant>
+			<bsch:constant>SСоздатьЭлемент</bsch:constant>
+			<bsch:constant>SКод</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:constant>SПолучитьОбъект</bsch:constant>
+			<bsch:constant>SИНН</bsch:constant>
+			<bsch:constant>Sinn</bsch:constant>
+			<bsch:constant>SНаименование</bsch:constant>
+			<bsch:constant>Sname</bsch:constant>
+			<bsch:constant>SЗаписать</bsch:constant>
+			<bsch:constant>SСправоничк контрагентов успешно обновлен</bsch:constant>
+			<bsch:constant>SОбновлено записей  - </bsch:constant>
+			<bsch:constant>SДобавлено  - </bsch:constant>
+			<bsch:constant>SВНИМАНИЕ Справочник контрагентов обновить не удалось</bsch:constant>
+			<bsch:constant>S/server/hs/link/address</bsch:constant>
+			<bsch:constant>SНайтиПоРеквизиту</bsch:constant>
+			<bsch:constant>SАдресаДоставки</bsch:constant>
+			<bsch:constant>SКПП</bsch:constant>
+			<bsch:constant>Skpp</bsch:constant>
+			<bsch:constant>SВладелец</bsch:constant>
+			<bsch:constant>SСправоничик адресов успешно обновлен</bsch:constant>
+			<bsch:constant>SВНИМАНИЕ Справочник адресов обновить не удалось</bsch:constant>
+			<bsch:constant>S/server/hs/link/nomen</bsch:constant>
+			<bsch:constant>SНоменклатура</bsch:constant>
+			<bsch:constant>SАртикул</bsch:constant>
+			<bsch:constant>Sartik</bsch:constant>
+			<bsch:constant>Sgr</bsch:constant>
+			<bsch:constant>SНД</bsch:constant>
+			<bsch:constant>SРодитель</bsch:constant>
+			<bsch:constant>SСправоничк номенклатуры успещно обновлен</bsch:constant>
+			<bsch:constant>SВНИМАНИЕ Справочник номенклатуры обновить не удалось</bsch:constant>
+			<bsch:constant>S/server/hs/link/grnom</bsch:constant>
+			<bsch:constant>SСоздатьГруппу</bsch:constant>
+			<bsch:constant>SСправоничк номенклатуры успешно обновлен</bsch:constant>
+			<bsch:constant>SОбновлено групп  - </bsch:constant>
+			<bsch:constant>SДобавлено групп  - </bsch:constant>
+			<bsch:variable name="Константы" isExternal="true"/>
+			<bsch:variable name="Справочники" isExternal="true"/>
+			<bsch:procedure name="ВыгрузитьДанные" isExported="true" parametersCount="3" startAddr="0">
+				<bsch:variable name="ТекущаяСсылка" isLocal="true" isParam="true"/>
+				<bsch:variable name="ТелоЗапроса" isLocal="true" isParam="true"/>
+				<bsch:variable name="ПризнакУспеха" isLocal="true" isParam="true"/>
+				<bsch:variable name="АдресСервера" isLocal="true"/>
+				<bsch:variable name="ПортСервера" isLocal="true"/>
+				<bsch:variable name="Логин" isLocal="true"/>
+				<bsch:variable name="Пароль" isLocal="true"/>
+				<bsch:variable name="Соединение" isLocal="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="Результат" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
+			<bsch:procedure name="ЗагрузитьДанные" parametersCount="3" startAddr="99">
+				<bsch:variable name="ТекущаяСсылка" isLocal="true" isParam="true"/>
+				<bsch:variable name="ПризнакУспеха" isLocal="true" isParam="true"/>
+				<bsch:variable name="ВозращаемыйМассив" isLocal="true" isParam="true"/>
+				<bsch:variable name="АдресСервера" isLocal="true"/>
+				<bsch:variable name="ПортСервера" isLocal="true"/>
+				<bsch:variable name="Логин" isLocal="true"/>
+				<bsch:variable name="Пароль" isLocal="true"/>
+				<bsch:variable name="Соединение" isLocal="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="Результат" isLocal="true"/>
+				<bsch:variable name="ЧтениеJSON" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПрочитатьJSON" isFunction="true" isExternal="true" parametersCount="9" startAddr="0"/>
+			<bsch:procedure name="ЗагрузитьКонтрагентов" isExported="true" parametersCount="0" startAddr="207">
+				<bsch:variable name="ЕслиУспешно" isLocal="true"/>
+				<bsch:variable name="СписокКонтрагенты" isLocal="true"/>
+				<bsch:variable name="Добавлено" isLocal="true"/>
+				<bsch:variable name="Обновлено" isLocal="true"/>
+				<bsch:variable name="ТекСтрока" isLocal="true"/>
+				<bsch:variable name="0ТекСтрока" isLocal="true"/>
+				<bsch:variable name="Контрагент" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ЗначениеЗаполнено" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+			<bsch:procedure name="ЗагрузитьАдреса" isExported="true" parametersCount="0" startAddr="354">
+				<bsch:variable name="ЕслиУспешно" isLocal="true"/>
+				<bsch:variable name="СписокАдресаДоставки" isLocal="true"/>
+				<bsch:variable name="Добавлено" isLocal="true"/>
+				<bsch:variable name="Обновлено" isLocal="true"/>
+				<bsch:variable name="ТекСтрока" isLocal="true"/>
+				<bsch:variable name="0ТекСтрока" isLocal="true"/>
+				<bsch:variable name="Контрагент" isLocal="true"/>
+				<bsch:variable name="АдресаДоставки" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ЗагрузитьНоменклатутру" isExported="true" parametersCount="0" startAddr="515">
+				<bsch:variable name="ЕслиУспешно" isLocal="true"/>
+				<bsch:variable name="СписокНоменклатура" isLocal="true"/>
+				<bsch:variable name="Добавлено" isLocal="true"/>
+				<bsch:variable name="Обновлено" isLocal="true"/>
+				<bsch:variable name="ТекСтрока" isLocal="true"/>
+				<bsch:variable name="0ТекСтрока" isLocal="true"/>
+				<bsch:variable name="Номенклатура" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ЗагрузитьГруппыНоменклатуры" isExported="true" parametersCount="0" startAddr="683">
+				<bsch:variable name="ЕслиУспешно" isLocal="true"/>
+				<bsch:variable name="СписокНоменклатура" isLocal="true"/>
+				<bsch:variable name="Добавлено" isLocal="true"/>
+				<bsch:variable name="Обновлено" isLocal="true"/>
+				<bsch:variable name="ТекСтрока" isLocal="true"/>
+				<bsch:variable name="0ТекСтрока" isLocal="true"/>
+				<bsch:variable name="Номенклатура" isLocal="true"/>
+			</bsch:procedure>
+		</serverModule>
+		<serverCall>true</serverCall>
+	</commonModule>
 	<commonForm name="Настройки" id="c5cfa103-5fb0-4cc1-b53d-2d6283f9a3bb">
 		<synonym>
 			<v8:item>
@@ -66,6 +209,12 @@
 				</mf:field>
 				<mf:field name="ПортСервера" kind="InputField" dataPath="НаборКонстант.ПортСервера">
 					<mf:contextMenu name="ПортСервераКонтекстноеМеню" type="ContextMenu"/>
+				</mf:field>
+				<mf:field name="Логин" kind="InputField" dataPath="НаборКонстант.Логин">
+					<mf:contextMenu name="ЛогинКонтекстноеМеню" type="ContextMenu"/>
+				</mf:field>
+				<mf:field name="Пароль" kind="InputField" dataPath="НаборКонстант.Пароль">
+					<mf:contextMenu name="ПарольКонтекстноеМеню" type="ContextMenu"/>
 				</mf:field>
 			</mf:mainElement>
 		</form>
@@ -119,6 +268,60 @@
 				<v8:FractionDigits>0</v8:FractionDigits>
 				<v8:AllowedSign>Any</v8:AllowedSign>
 			</v8:NumberQualifiers>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+	</constant>
+	<constant name="Логин" id="854ce468-b5ed-46c3-ae40-ec0b253504dd">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Логин</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.Логин" category="Manager">
+			<xr:TypeId>6ca6c619-6055-4c65-870e-1ece71b85c8a</xr:TypeId>
+			<xr:ValueId>5ada8082-b17b-4097-aec3-649a23593943</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.Логин" category="ValueManager">
+			<xr:TypeId>a306a22b-e176-4c1c-8637-95104759027d</xr:TypeId>
+			<xr:ValueId>b55b2d64-99df-440f-b480-3ddc2ee6f7b7</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>30</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+	</constant>
+	<constant name="Пароль" id="825a952c-cffb-4466-9b5e-40cbfbb470ae">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пароль</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.Пароль" category="Manager">
+			<xr:TypeId>caaa8efa-aae8-4d65-8f3d-66b62da3c6a3</xr:TypeId>
+			<xr:ValueId>324446a3-1e63-4b11-9a0f-27abd57a4f4a</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.Пароль" category="ValueManager">
+			<xr:TypeId>80b7ef11-7b2b-437c-b38d-2b741b761dbb</xr:TypeId>
+			<xr:ValueId>e8ef029e-3e8b-4467-955f-6e5733e3aea1</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>15</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
 		</type>
 		<valueManagerModule version="1" startAddr="0">
 			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
@@ -1033,18 +1236,9 @@
 				</v8:item>
 			</synonym>
 			<form>
-				<mf:serverModule version="1" startAddr="225">
-					<bsch:cmdOpCode>1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,3,18,51,16,1,3,3,18,20,1,1,3,3,3,18,21,5,1,16,1,4,3,12,24,18,19,1,1,22,1,2,12,18,21,5,1,40,1,2,12,2,12,12,16,39,1,1,22,1,3,18,51,16,1,3,12,6,16,1,3,8,2,12,18,51,18,20,1,1,3,18,20,1,1,3,18,20,1,1,3,4,18,20,1,1,3,2,12,71,18,20,1,1,3,4,18,20,1,1,3,2,12,12,18,20,1,1,3,18,20,1,1,48,49,2,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,18,20,1,1,3,4,18,20,1,1,3,3,12,12,18,20,1,1,3,4,18,20,1,1,3,3,12,18,20,1,1,3,18,20,1,1,39,50,3,8,16,3,8,16,1,3,18,20,1,1,3,3,18,21,5,1,16,1,4,3,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>4,2,0,0,0,1,0,4,0,5,3,0,2,0,1,0,5,0,7,4,2,3,2,3,0,8,5,0,1,4,0,9,5,1,1,5,9,10,6,4,5,1,6,0,10,0,11,7,6,8,0,1,1,11,14,0,19,1,9,0,10,0,19,72,20,2,11,3,12,13,0,72,21,23,0,27,0,0,14,0,28,0,15,0,0,29,0,0,4,17,2,18,1,16,29,32,0,0,19,32,34,0,0,20,34,36,0,22,1,21,36,37,0,2,24,0,1,23,37,39,0,25,1,21,39,40,0,2,26,27,1,23,40,42,0,0,28,42,45,0,0,2,29,0,0,45,2,0,0,2,0,197,1,2,0,2,0,0,47,0,0,20,47,49,0,30,1,21,49,50,0,1,29,27,1,23,50,52,0,31,1,21,52,53,0,1,32,1,23,53,55,0,0,28,55,56,145,1,2,0,0,2,0,0,58,0,0,33,58,60,3,0,0,34,0,60,0,63,35,3,2,0,63,65,0,0,0</bsch:cmdOperand>
-					<bsch:constant>SАдресСервера</bsch:constant>
-					<bsch:constant>SПолучить</bsch:constant>
-					<bsch:constant>SПортСервера</bsch:constant>
-					<bsch:constant>SHTTPСоединение</bsch:constant>
-					<bsch:constant>SHTTPЗапрос</bsch:constant>
-					<bsch:constant>SУстановитьТелоИзСтроки</bsch:constant>
-					<bsch:constant>SОтправитьДляОбработки</bsch:constant>
-					<bsch:constant>SКод ошибки  - </bsch:constant>
-					<bsch:constant>SКодСостояния</bsch:constant>
+				<mf:serverModule version="1" startAddr="185">
+					<bsch:cmdOpCode>1,2,12,18,21,5,1,40,1,2,12,2,12,12,16,39,1,1,22,1,3,18,51,16,1,3,12,6,16,1,3,8,2,12,18,51,18,20,1,1,3,18,20,1,1,3,18,20,1,1,3,4,18,20,1,1,3,2,12,71,18,20,1,1,3,4,18,20,1,1,3,2,12,12,18,20,1,1,3,4,18,20,1,1,3,2,12,12,18,20,1,1,3,18,20,1,1,48,49,2,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,18,20,1,1,3,4,18,20,1,1,3,3,12,12,18,20,1,1,3,4,18,20,1,1,3,3,12,18,20,1,1,3,18,20,1,1,39,50,3,8,16,3,8,16,1,3,18,20,1,1,3,3,18,21,5,1,16,1,2,4,3,3,18,20,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>5,0,0,0,1,0,5,16,6,1,2,2,3,4,0,16,7,9,0,15,1,0,5,0,16,1,6,0,0,17,1,0,3,8,2,9,1,7,17,20,1,0,10,20,22,1,0,11,22,24,1,13,1,12,24,25,1,1,15,0,1,14,25,27,1,16,1,12,27,28,1,1,17,18,1,14,28,30,1,19,1,12,30,31,1,1,20,18,1,14,31,34,1,0,21,34,37,0,0,1,22,0,0,37,3,0,0,3,0,155,2,3,0,3,0,0,39,1,0,11,39,41,1,23,1,12,41,42,1,2,22,18,1,14,42,44,1,24,1,12,44,45,1,2,25,1,14,45,47,1,0,21,47,48,103,1,3,0,0,3,0,0,50,1,0,26,50,52,4,1,0,27,0,52,0,54,4,29,4,0,3,28,54,56,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SКлюч</bsch:constant>
 					<bsch:constant>SПустая</bsch:constant>
 					<bsch:constant>SСтатус</bsch:constant>
@@ -1064,6 +1258,8 @@
 					<bsch:constant>Sktrid</bsch:constant>
 					<bsch:constant>SКонтрагент</bsch:constant>
 					<bsch:constant>SКод</bsch:constant>
+					<bsch:constant>Sadrid</bsch:constant>
+					<bsch:constant>SАдрес</bsch:constant>
 					<bsch:constant>SЗаписатьКонецОбъекта</bsch:constant>
 					<bsch:constant>SНоменклатура</bsch:constant>
 					<bsch:constant>Snomid</bsch:constant>
@@ -1071,31 +1267,21 @@
 					<bsch:constant>SКоличество</bsch:constant>
 					<bsch:constant>SЗаписатьКонецМассива</bsch:constant>
 					<bsch:constant>SЗакрыть</bsch:constant>
+					<bsch:constant>SВыгрузитьДанные</bsch:constant>
 					<bsch:constant>S/server/hs/link/loadzak</bsch:constant>
-					<bsch:variable name="Константы" isExternal="true"/>
 					<bsch:variable name="Параметры" isExternal="true"/>
 					<bsch:variable name="Объект" isExternal="true"/>
 					<bsch:variable name="Перечисления" isExternal="true"/>
 					<bsch:variable name="Символы" isExternal="true"/>
-					<bsch:procedure name="ОтправитьЗапросНаСервер" parametersCount="2" startAddr="0">
-						<bsch:variable name="ТекущаяСсылка" isLocal="true" isParam="true"/>
-						<bsch:variable name="ТелоЗапроса" isLocal="true" isParam="true"/>
-						<bsch:variable name="АдресСервера" isLocal="true"/>
-						<bsch:variable name="ПортСервера" isLocal="true"/>
-						<bsch:variable name="Соединение" isLocal="true"/>
-						<bsch:variable name="Запрос" isLocal="true"/>
-						<bsch:variable name="Результат" isLocal="true"/>
-						<bsch:paramsDefValue/>
-						<bsch:paramsDefValue/>
-					</bsch:procedure>
-					<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
-					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="56">
+					<bsch:variable name="ИнтеграцияВызовСервера" isExternal="true"/>
+					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
 						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ОтправитьДокНаСервере" parametersCount="0" startAddr="75">
+					<bsch:procedure name="ОтправитьДокНаСервере" parametersCount="0" startAddr="19">
+						<bsch:variable name="Успешно" isLocal="true"/>
 						<bsch:variable name="Данные" isLocal="true"/>
 						<bsch:variable name="ТекСтрока" isLocal="true"/>
 						<bsch:variable name="0ТекСтрока" isLocal="true"/>
@@ -1104,7 +1290,7 @@
 				</mf:serverModule>
 				<mf:clientModule version="1" startAddr="6">
 					<bsch:cmdOpCode>1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>69,0,1,69,70,0,0,0</bsch:cmdOperand>
+					<bsch:cmdOperand>60,0,1,60,61,0,0,0</bsch:cmdOperand>
 					<bsch:procedure name="ОтправитьДок" parametersCount="1" startAddr="0">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
@@ -1284,123 +1470,25 @@
 					<bsch:cmdOperand>0,0</bsch:cmdOperand>
 				</mf:serverModule>
 				<mf:clientModule version="1" startAddr="24">
-					<bsch:cmdOpCode>1,18,19,1,1,22,1,18,19,1,1,22,1,18,19,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>161,0,1,161,162,0,166,0,3,166,167,0,171,0,5,171,172,0,179,0,7,179,180,0,0,0</bsch:cmdOperand>
-					<bsch:procedure name="ЗагрузитьАдреса" parametersCount="1" startAddr="0">
+					<bsch:cmdOpCode>1,2,18,20,1,1,2,18,20,1,1,22,1,2,18,20,1,1,2,18,20,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>4,0,0,0,4,5,0,0,1,5,6,0,10,0,0,2,10,11,0,0,3,11,12,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SЗагрузитьКонтрагентов</bsch:constant>
+					<bsch:constant>SЗагрузитьАдреса</bsch:constant>
+					<bsch:constant>SЗагрузитьГруппыНоменклатуры</bsch:constant>
+					<bsch:constant>SЗагрузитьНоменклатутру</bsch:constant>
+					<bsch:variable name="ИнтеграцияВызовСервера" isExternal="true"/>
+					<bsch:procedure name="ЗагрузитьКонтрагентов" parametersCount="1" startAddr="0">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ЗагрузитьАдресаНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
-					<bsch:procedure name="ЗагрузитьКонтрагентов" parametersCount="1" startAddr="6">
-						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
-						<bsch:paramsDefValue/>
-					</bsch:procedure>
-					<bsch:procedure name="ЗагрузитьКонтрагентовНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
 					<bsch:procedure name="ЗагрузитьНоменклатутру" parametersCount="1" startAddr="12">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ЗагрузитьНоменклатутруНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
-					<bsch:procedure name="ЗагрузитьГруппыНоменклатуры" parametersCount="1" startAddr="18">
-						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
-						<bsch:paramsDefValue/>
-					</bsch:procedure>
-					<bsch:procedure name="ЗагрузитьГруппыНоменклатурыНаСервере" isExternal="true" parametersCount="0" startAddr="0"/>
 				</mf:clientModule>
 				<mf:serverWOContextModule version="1">
-					<bsch:cmdOpCode>1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,3,18,51,16,1,3,3,3,18,21,5,1,16,1,3,17,45,39,1,22,1,3,4,18,19,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,1,3,12,3,12,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,1,3,4,18,19,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,1,3,12,3,12,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,4,33,29,40,1,3,12,2,12,3,12,18,21,5,1,16,39,1,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,1,3,4,18,19,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,3,12,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,1,3,12,3,12,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,4,33,29,40,1,3,12,2,12,3,12,18,21,5,1,16,39,1,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,1,3,2,12,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,3,18,51,16,1,3,4,18,51,16,1,3,3,3,18,21,5,1,16,1,3,12,4,33,40,1,3,18,51,16,1,3,3,18,21,5,1,18,20,1,1,3,3,18,19,5,1,16,1,3,18,20,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,2,12,4,3,12,18,21,5,1,16,1,3,2,12,4,3,12,10,3,18,21,5,1,16,1,3,18,19,5,1,29,40,1,3,2,12,18,21,5,1,16,39,1,3,3,18,21,5,1,16,1,1,3,12,3,12,16,1,3,12,3,12,16,1,3,12,3,16,1,3,18,20,1,1,39,50,3,8,16,3,8,16,39,1,4,3,12,24,18,19,1,1,1,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>3,1,0,0,0,1,0,3,0,4,2,0,2,0,1,0,4,0,5,3,1,2,2,3,0,6,4,0,1,4,0,7,5,3,4,1,5,0,7,0,8,5,0,0,45,9,0,14,0,6,1,0,0,14,0,16,0,7,8,0,179,17,1,0,9,0,18,1,0,0,11,0,18,1,10,18,19,2,1,1,2,0,19,0,20,1,0,12,20,21,0,0,2,0,0,21,4,0,0,4,0,171,3,4,0,4,0,0,23,5,1,13,3,15,1,14,0,23,0,25,5,1,3,0,25,0,143,26,5,1,13,0,16,0,26,0,27,5,17,3,15,0,151,29,5,5,0,18,0,29,0,30,32,5,17,3,19,0,33,5,20,3,21,0,34,5,0,22,34,35,95,1,4,0,0,4,0,0,187,37,23,0,7,0,1,4,37,38,40,0,45,0,24,1,0,0,45,0,47,0,7,8,0,343,49,1,0,9,0,50,1,0,0,11,0,50,1,10,50,51,2,1,1,2,0,51,0,52,1,0,12,52,54,0,0,2,0,0,54,4,0,0,4,0,335,3,4,0,4,0,0,56,5,1,25,3,15,1,14,0,56,0,58,5,1,3,0,58,0,286,59,5,1,25,0,16,0,59,0,60,5,26,3,15,0,294,62,5,5,0,18,0,62,0,63,65,5,27,3,28,0,66,5,20,3,21,0,68,3,29,30,0,0,327,69,5,31,1,25,3,29,1,14,0,69,0,327,70,72,5,0,22,72,73,238,1,4,0,0,4,0,0,351,75,23,0,7,0,1,4,75,76,78,0,83,0,32,1,0,0,83,0,86,0,7,8,0,501,88,1,0,9,0,89,1,0,0,11,0,89,1,10,89,90,2,1,1,2,0,90,0,91,1,0,12,91,93,0,0,2,0,0,93,4,0,0,4,0,493,3,4,0,4,0,0,95,5,1,25,3,15,1,14,0,95,0,97,5,1,3,0,97,0,450,98,5,1,25,0,33,0,98,0,99,5,26,3,15,0,458,101,5,5,0,18,0,101,0,102,105,5,20,3,21,0,108,3,29,30,0,0,485,109,5,31,1,25,3,29,1,14,0,109,0,485,110,112,5,0,22,112,114,402,1,4,0,0,4,0,0,509,116,23,0,7,0,1,4,116,117,119,0,125,0,0,0,0,1,0,125,0,126,1,0,2,0,1,0,126,0,127,2,0,1,2,3,0,128,3,34,1,4,0,129,4,2,3,1,5,0,129,0,131,4,7,8,0,690,132,5,0,9,0,133,5,4,0,11,0,133,1,10,133,134,6,5,1,2,0,134,0,135,5,0,12,135,136,0,0,6,0,0,136,8,0,0,8,0,682,7,8,0,8,0,0,138,9,1,13,17,7,19,2,35,0,138,0,140,10,1,36,37,7,38,0,9,4,35,0,140,0,142,10,1,3,0,142,0,649,143,10,1,36,0,16,0,143,0,657,145,10,10,0,18,0,145,0,146,148,10,37,7,38,0,149,10,20,7,21,0,150,10,39,9,0,151,10,0,22,151,152,592,1,8,0,0,8,0,0,698,154,23,4,7,0,1,4,154,155,157,0,0</bsch:cmdOperand>
-					<bsch:constant>SАдресСервера</bsch:constant>
-					<bsch:constant>SПолучить</bsch:constant>
-					<bsch:constant>SПортСервера</bsch:constant>
-					<bsch:constant>SHTTPСоединение</bsch:constant>
-					<bsch:constant>SHTTPЗапрос</bsch:constant>
-					<bsch:constant>SОтправитьДляОбработки</bsch:constant>
-					<bsch:constant>S/server/hs/link/partner</bsch:constant>
-					<bsch:constant>SКодСостояния</bsch:constant>
-					<bsch:constant>N200</bsch:constant>
-					<bsch:constant>SЧтениеJSON</bsch:constant>
-					<bsch:constant>SУстановитьСтроку</bsch:constant>
-					<bsch:constant>SПолучитьТелоКакСтроку</bsch:constant>
-					<bsch:constant>SЗакрыть</bsch:constant>
-					<bsch:constant>SКонтрагенты</bsch:constant>
-					<bsch:constant>SНайтиПоКоду</bsch:constant>
-					<bsch:constant>Sid</bsch:constant>
-					<bsch:constant>SСоздатьЭлемент</bsch:constant>
-					<bsch:constant>SИНН</bsch:constant>
-					<bsch:constant>SПолучитьОбъект</bsch:constant>
-					<bsch:constant>Sinn</bsch:constant>
-					<bsch:constant>SНаименование</bsch:constant>
-					<bsch:constant>Sname</bsch:constant>
-					<bsch:constant>SЗаписать</bsch:constant>
-					<bsch:constant>SОшибка, код ошибки  - </bsch:constant>
-					<bsch:constant>S/server/hs/link/nomen</bsch:constant>
-					<bsch:constant>SНоменклатура</bsch:constant>
-					<bsch:constant>SКод</bsch:constant>
-					<bsch:constant>SАртикул</bsch:constant>
-					<bsch:constant>Sartik</bsch:constant>
-					<bsch:constant>Sgr</bsch:constant>
-					<bsch:constant>SНД</bsch:constant>
-					<bsch:constant>SРодитель</bsch:constant>
-					<bsch:constant>S/server/hs/link/grnom</bsch:constant>
-					<bsch:constant>SСоздатьГруппу</bsch:constant>
-					<bsch:constant>S/server/hs/link/address</bsch:constant>
-					<bsch:constant>SНайтиПоРеквизиту</bsch:constant>
-					<bsch:constant>SАдресаДоставки</bsch:constant>
-					<bsch:constant>SКПП</bsch:constant>
-					<bsch:constant>Skpp</bsch:constant>
-					<bsch:constant>SВладелец</bsch:constant>
-					<bsch:variable name="Константы" isExternal="true"/>
-					<bsch:variable name="Справочники" isExternal="true"/>
-					<bsch:procedure name="ЗагрузитьДанные" isFunction="true" parametersCount="1" startAddr="0">
-						<bsch:variable name="ТекущаяСсылка" isLocal="true" isParam="true"/>
-						<bsch:variable name="АдресСервера" isLocal="true"/>
-						<bsch:variable name="ПортСервера" isLocal="true"/>
-						<bsch:variable name="Соединение" isLocal="true"/>
-						<bsch:variable name="Запрос" isLocal="true"/>
-						<bsch:variable name="Результат" isLocal="true"/>
-						<bsch:paramsDefValue/>
-					</bsch:procedure>
-					<bsch:procedure name="ЗагрузитьКонтрагентовНаСервере" parametersCount="0" startAddr="47">
-						<bsch:variable name="Результат" isLocal="true"/>
-						<bsch:variable name="ЧтениеJSON" isLocal="true"/>
-						<bsch:variable name="СписокКонтрагенты" isLocal="true"/>
-						<bsch:variable name="ТекСтрока" isLocal="true"/>
-						<bsch:variable name="0ТекСтрока" isLocal="true"/>
-						<bsch:variable name="Контрагент" isLocal="true"/>
-					</bsch:procedure>
-					<bsch:procedure name="ПрочитатьJSON" isFunction="true" isExternal="true" parametersCount="9" startAddr="0"/>
-					<bsch:procedure name="ЗначениеЗаполнено" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
-					<bsch:procedure name="ЗагрузитьНоменклатутруНаСервере" parametersCount="0" startAddr="190">
-						<bsch:variable name="Результат" isLocal="true"/>
-						<bsch:variable name="ЧтениеJSON" isLocal="true"/>
-						<bsch:variable name="СписокНоменклатура" isLocal="true"/>
-						<bsch:variable name="ТекСтрока" isLocal="true"/>
-						<bsch:variable name="0ТекСтрока" isLocal="true"/>
-						<bsch:variable name="Номенклатура" isLocal="true"/>
-					</bsch:procedure>
-					<bsch:procedure name="ЗагрузитьГруппыНоменклатурыНаСервере" parametersCount="0" startAddr="354">
-						<bsch:variable name="Результат" isLocal="true"/>
-						<bsch:variable name="ЧтениеJSON" isLocal="true"/>
-						<bsch:variable name="СписокНоменклатура" isLocal="true"/>
-						<bsch:variable name="ТекСтрока" isLocal="true"/>
-						<bsch:variable name="0ТекСтрока" isLocal="true"/>
-						<bsch:variable name="Номенклатура" isLocal="true"/>
-					</bsch:procedure>
-					<bsch:procedure name="ЗагрузитьАдресаНаСервере" parametersCount="0" startAddr="512">
-						<bsch:variable name="АдресСервера" isLocal="true"/>
-						<bsch:variable name="ПортСервера" isLocal="true"/>
-						<bsch:variable name="Соединение" isLocal="true"/>
-						<bsch:variable name="Запрос" isLocal="true"/>
-						<bsch:variable name="Результат" isLocal="true"/>
-						<bsch:variable name="ЧтениеJSON" isLocal="true"/>
-						<bsch:variable name="СписокАдресаДоставки" isLocal="true"/>
-						<bsch:variable name="ТекСтрока" isLocal="true"/>
-						<bsch:variable name="0ТекСтрока" isLocal="true"/>
-						<bsch:variable name="Контрагент" isLocal="true"/>
-						<bsch:variable name="АдресаДоставки" isLocal="true"/>
-					</bsch:procedure>
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
 				</mf:serverWOContextModule>
 				<mf:clientServerWOContextModule version="1">
 					<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -1444,42 +1532,10 @@
 						</v8:item>
 					</mf:tooltip>
 				</mf:command>
-				<mf:command name="ЗагрузитьАдреса">
-					<mf:title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Загрузить адреса</v8:content>
-						</v8:item>
-					</mf:title>
-					<mf:handlerName>ЗагрузитьАдреса</mf:handlerName>
-					<mf:tooltip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Загрузить адреса</v8:content>
-						</v8:item>
-					</mf:tooltip>
-				</mf:command>
-				<mf:command name="ЗагрузитьГруппыНоменклатуры">
-					<mf:title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Загрузить группы номенклатуры</v8:content>
-						</v8:item>
-					</mf:title>
-					<mf:handlerName>ЗагрузитьГруппыНоменклатуры</mf:handlerName>
-					<mf:tooltip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Загрузить группы номенклатуры</v8:content>
-						</v8:item>
-					</mf:tooltip>
-				</mf:command>
 				<mf:mainElement>
 					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
 					<mf:button name="ЗагрузитьКонтраганетов" type="UsualButton" commandName="Form.Command.ЗагрузитьКонтрагантов"/>
 					<mf:button name="ЗагрузитьНоменклатутру" type="UsualButton" commandName="Form.Command.ЗагрузитьНоменклатутру"/>
-					<mf:button name="ЗагрузитьАдреса" type="UsualButton" commandName="Form.Command.ЗагрузитьАдреса"/>
-					<mf:button name="ЗагрузитьГруппыНоменклатуры" type="UsualButton" commandName="Form.Command.ЗагрузитьГруппыНоменклатуры"/>
 				</mf:mainElement>
 			</form>
 		</form>
@@ -1538,6 +1594,16 @@
 	</requiredPermission>
 	<desktopCommandInterface>
 		<CommandVisibility name="Constant.АдресСервера.StandardCommand.Open">
+			<Visibility2>
+				<mf:common>false</mf:common>
+			</Visibility2>
+		</CommandVisibility>
+		<CommandVisibility name="Constant.Логин.StandardCommand.Open">
+			<Visibility2>
+				<mf:common>false</mf:common>
+			</Visibility2>
+		</CommandVisibility>
+		<CommandVisibility name="Constant.Пароль.StandardCommand.Open">
 			<Visibility2>
 				<mf:common>false</mf:common>
 			</Visibility2>
