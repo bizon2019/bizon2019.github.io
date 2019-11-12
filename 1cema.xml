@@ -1164,20 +1164,23 @@
 					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 					<bsch:cmdOperand>0,0</bsch:cmdOperand>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="17">
-					<bsch:cmdOpCode>1,2,2,12,12,12,18,20,1,1,2,12,18,20,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>5,0,1,1,2,3,1,0,5,6,1,1,0,4,6,8,0,0,0</bsch:cmdOperand>
-					<bsch:constant>SОтправитьДок</bsch:constant>
+				<mf:clientModule version="1" startAddr="35">
+					<bsch:cmdOpCode>1,3,2,12,12,12,16,1,3,65,40,1,4,18,19,1,39,1,2,2,12,12,12,18,20,1,1,2,12,18,20,1,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>5,1,0,0,1,2,0,6,1,0,17,7,3,1,1,7,32,9,1,0,0,1,2,1,4,9,10,0,0,0,5,10,11,13,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SСписок</bsch:constant>
 					<bsch:constant>SТекущиеДанные</bsch:constant>
 					<bsch:constant>SНомер</bsch:constant>
+					<bsch:constant>SВыберите заказ</bsch:constant>
+					<bsch:constant>SОтправитьДок</bsch:constant>
 					<bsch:constant>SОбновить</bsch:constant>
-					<bsch:variable name="ИнтеграцияВызовСервера" isExternal="true"/>
 					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:variable name="ИнтеграцияВызовСервера" isExternal="true"/>
 					<bsch:procedure name="Отправить" parametersCount="1" startAddr="0">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="ТекНомер" isLocal="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
+					<bsch:procedure name="Предупреждение" isExternal="true" parametersCount="3" startAddr="0"/>
 				</mf:clientModule>
 				<mf:serverWOContextModule version="1">
 					<bsch:cmdOpCode>22</bsch:cmdOpCode>
